@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+         <div class="row">
+            <div class="col-md-8">
+                <h1 class="text-center mt-2">Détail</h1>
+         <img src="{{article.image.url}}" alt="" style="max-width: 500px;">
+         <h2>{{article.title}}</h2>
+         <p>{{article.desc}}</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="mt-2">les articles en relation</h3>
+            </div>
+         </div>
+    </div>
+{% endblock %}
