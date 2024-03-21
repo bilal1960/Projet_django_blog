@@ -7,4 +7,6 @@ def home(request):
 
 def detail(request,id_article):
     article=Article.objects.get(id=id_article)
-    return render(request,"detail.html",{"article":article})
+    category=article.category
+    articles_en_relation=Article.objects.filter(category=category)[:5]
+    return render(request,"detail.html",{"article":article,"aer":articles_en_relation})
