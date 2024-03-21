@@ -1,5 +1,8 @@
 from django.db import models
 
+class Category(models.Model):
+    name=models.CharField(max_length=120)
+
 class Article(models.Model):
     title=models.CharField(max_length=50)
     desc=models.TextField()
