@@ -18,10 +18,11 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
-from blog.views  import home,detail
+from blog.views  import home,detail, search
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home,name="home"),
-    path('article/<int:id_article>',detail,name="detail")
+    path('article/<int:id_article>',detail,name="detail"),
+    path('article/recherche',search,name="search"),
 
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
