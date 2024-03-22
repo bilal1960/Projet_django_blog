@@ -16,4 +16,7 @@ def search(request):
 
     return render(request,"search.html",{"liste_article":liste_article})
 
+
+
+
     
