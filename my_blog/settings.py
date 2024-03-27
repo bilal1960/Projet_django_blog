@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'app_auth',
-    'django_extensions'
-
+    'app_admin',
+    'django_extensions',
+    
 ]
 
 MIDDLEWARE = [
