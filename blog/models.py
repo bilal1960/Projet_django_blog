@@ -12,7 +12,7 @@ class Article(models.Model):
     title=models.CharField(max_length=50)
     category=models.ForeignKey(Category,on_delete=models.CASCADE)
     desc=models.TextField()
-    image=models.ImageField()
+    image=models.ImageField(null=True,blank=True)
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
 
