@@ -12,7 +12,7 @@ def login_blog(request):
          user = authenticate(username=username,password=pwd)
          if user is not None:
             login(request,user)
-            return redirect('home')
+            return redirect('dashboard')
          else:
             messages.error(request,'Authentification échoué')
             return render(request,'login.html',{'form':form})

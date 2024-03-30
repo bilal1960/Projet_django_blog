@@ -45,7 +45,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-primary dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink"> <!-- Ajout de dropdown-menu-right pour aligner vers la droite -->
                     {% if user.is_authenticated %}
-                    <a class="dropdown-item" href="#">Déconnexion</a>
+                    <a class="dropdown-item" href="{% url 'logout' %}">Déconnexion</a>
                     {% endif %}
                 </div>
             </li>

@@ -29,7 +29,9 @@
                                <td class="h6"><a href="#">{{ article.desc }}</a></td>
                                <td>
                                    <a href="{% url 'update-article' article.pk %}" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                   {% if has_perm %}
                                    <a href="{% url 'delete-article' article.pk %}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                   {% endif %}
                                </td>
                             </tr>
                             {% endfor %}
